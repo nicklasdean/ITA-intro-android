@@ -3,7 +3,9 @@ package com.example.introduction
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -18,6 +20,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import com.example.introduction.ui.theme.IntroductionTheme
 
 class MainActivity : ComponentActivity() {
@@ -35,7 +38,6 @@ class MainActivity : ComponentActivity() {
                     Layout();
                 }
             }
-
         }
     }
 }
@@ -56,30 +58,35 @@ fun Layout(modifier: Modifier = Modifier){
         Row{
             Box(modifier = Modifier
                 .background(Color.Red)
-                .fillMaxHeight(0.5f)
-                .fillMaxWidth(0.5f),
-                contentAlignment = Alignment.BottomCenter
+                .fillMaxHeight(0.4f)
+                .fillMaxWidth(0.5f)
+                .border(BorderStroke(10.dp,Color.White))
             ){
-                Text("Hey allesammen");
             };
             Box(modifier = Modifier
-                .background(Color.Blue)
-                .fillMaxHeight(0.5f)
+                .background(Color.Red)
+                .fillMaxHeight(0.4f)
                 .fillMaxWidth()
+                .border(BorderStroke(10.dp,Color.White))
+
             ){};
         }
 
         Row{
             Box(modifier = Modifier
-                .background(Color.Yellow)
+                .background(Color.Red)
                 .fillMaxHeight()
                 .fillMaxWidth(0.5f)
+                .border(BorderStroke(10.dp,Color.White))
+
             ){};
             Box(modifier = Modifier
-                .background(Color.Green)
+                .background(Color.Red)
                 .fillMaxHeight()
                 .fillMaxWidth()
-            ){};
+                .border(BorderStroke(10.dp,Color.White))
+
+                ){};
         }
     }
 }
